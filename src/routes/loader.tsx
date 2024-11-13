@@ -16,7 +16,7 @@ export const redirectIfAuthenticated: LoaderFunction = () => {
     const token = cookies.get("access_token");
 
     if (token) {
-        redirect("/contact");
+        return redirect("/contact");
     }
     return null;
 };
